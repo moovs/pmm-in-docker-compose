@@ -18,7 +18,7 @@ PMM is a free and open-source solution that you can run in your own environment 
 ## Getting a PMM server running on docker is just matter of following a few simple steps.
 If you just run the docker-compose file it will not work correctly due to incorrect container initialization, therefore:
 <br>
-- first step that you will need to do create the pmm-data container with default values: 
+- the first step that you will need to do create the ```pmm-data container``` with default values: 
 ```
 docker create \
    -v /opt/prometheus/data \
@@ -27,4 +27,20 @@ docker create \
    -v /var/lib/grafana \
    --name pmm-data \
    percona/pmm-server:latest /bin/true
+```
+- the second step is create and start ```pmm-server container``` to initialize the data directory correctly:
+```
+docker run -d \
+  -p 81:80 \
+  --volumes-from pmm-data \
+  --name pmm-server \
+  --restart always \
+  percona/pmm-server:latest
+```
+- the next step you need stop and remove ```pmm-server container```:
+```
+root@host:~# docker stop pmm-server container
+```
+```
+root@host:~# docker rm pmm-server container
 ```
