@@ -19,7 +19,7 @@ PMM is a free and open-source solution that you can run in your own environment 
 # Step 1
 If you just run the docker-compose file it will not work correctly due to incorrect container initialization.
 <br>
-Therefore, the first step that you will need to do create the pmm-data container with default values: 
+- Therefore, the first step that you will need to do create the pmm-data container with default values: 
 ```
 docker create \
    -v /opt/prometheus/data \
