@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="600" height="170" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/percona.png">
+  <img width="600" height="170" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/pmm.png">
 </p>
 
 <p align="center">
