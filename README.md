@@ -84,11 +84,11 @@ root@host:~# docker-compose up -d
 ##
 After successfully completing the above steps, open your browser and type your IP of the host where the PMM Server is running and port what you specify in docker-compose:
 
-<img width="250" height="40" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/Screen%20Shot%202019-04-11%20at%2018.25.20.png">
+<img width="250" height="40" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/ip.png">
 
 If everything went well, you will see below page:
 
-<img width="1000" height="400" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/Screen%20Shot%202019-04-11%20at%2018.33.31.png">
+<img width="1000" height="400" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/home.png">
 
 
 ## INSTALL PMM-CLIENT 
@@ -121,7 +121,7 @@ root@host:~# pmm-admin config --server 192.168.0.0:81 --server-password YoUr-Pas
 root@host:~# pmm-admin add mysql
 ```
 - after some time in section ```Mysql > Overview``` you can see information like this:
-<img width="1000" height="500" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/Screen%20Shot%202019-04-11%20at%2018.11.40.png">
+<img width="1000" height="500" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/mysql.png">
 
 - finally, check the all services are up and running using below command:
 ```
@@ -150,7 +150,7 @@ mysql> INSTALL PLUGIN QUERY_RESPONSE_TIME_WRITE SONAME 'query_response_time.so';
 mysql> SET GLOBAL query_response_time_stats=ON;
 ```
 After that you will see information like this:
-<img width="1000" height="500" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/Screen%20Shot%202019-04-11%20at%2019.58.48.png">
+<img width="1000" height="500" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/query.png">
 ##
 ## LINKS TO MORE INFORMATION
 > https://www.percona.com/doc/percona-monitoring-and-management/index.html | Percona Monitoring and Management Documentation <br>
