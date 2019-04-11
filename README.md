@@ -151,10 +151,14 @@ mysql> SET GLOBAL query_response_time_stats=ON;
 ```
 After that you will see information like this:
 <img width="1000" height="500" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/Screen%20Shot%202019-04-11%20at%2019.58.48.png">
-
-
-
-
+##
+## LINKS TO MORE INFORMATION
+> https://www.percona.com/doc/percona-monitoring-and-management/index.html | Percona Monitoring and Management Documentation <br>
+> https://www.percona.com/doc/percona-monitoring-and-management/pmm-admin.html#pmm-admin-add | Managing PMM Client <br>
+> https://www.percona.com/doc/percona-monitoring-and-management/conf-mysql.html#pmm-conf-mysql-slow-log-settings | Configuring MySQL for Best Results <br>
+> https://www.percona.com/doc/percona-monitoring-and-management/index.metrics-monitor.dashboard.html | Metrics Monitor Dashboards <br>
+> https://www.percona.com/doc/percona-monitoring-and-management/glossary.option.html | PMM Server Additional Options <br>
+> https://www.percona.com/doc/percona-monitoring-and-management/deploy/client/apt.html | Installing PMM Client on Debian or Ubuntu<br>
 
 <p align="center">
 <img src="https://octodex.github.com/images/dojocat.jpg" width="200">
