@@ -9,5 +9,7 @@
 ***
 
 This a little guide how to deploy and setting [Percona Monitoring and Management (PMM)](https://www.percona.com/doc/percona-monitoring-and-management/index.html) in docker-compose.<br>
-Percona Monitoring and Management (PMM) is an open-source platform for managing and monitoring MySQL and MongoDB performance. It is developed by Percona in collaboration with experts in the field of managed database services, support and consulting.
+Percona Monitoring and Management (PMM) is an open-source platform for managing and monitoring MySQL and MongoDB performance.<br> 
+It is developed by Percona in collaboration with experts in the field of managed database services, support and consulting.
+<br>
 PMM is a free and open-source solution that you can run in your own environment for maximum security and reliability. It provides thorough time-based analysis for MySQL and MongoDB servers to ensure that your data works as efficiently as possible.
