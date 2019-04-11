@@ -15,7 +15,7 @@ It is developed by Percona in collaboration with experts in the field of managed
 PMM is a free and open-source solution that you can run in your own environment for maximum security and reliability. It provides thorough time-based analysis for MySQL and MongoDB servers to ensure that your data works as efficiently as possible.
 ***
 
-## Getting a PMM server running on docker is just matter of following a few simple steps.
+## GETTING A PMM SERVER RUNNING ON DOCKER IS JUST MATTER OF FOLLOWING A FEW SIMPLE STEPS.
 If you just run the docker-compose file it will not work correctly due to incorrect container initialization, therefore:
 <br>
 - the first step that you will need to do create the ```pmm-data container``` with default values: 
@@ -82,8 +82,44 @@ root@host:~# docker rm pmm-data_container
 root@host:~# docker-compose up -d
 ```
 ##
+After successfully completing the above steps, open your browser and type your IP of the host where the PMM Server is running and port what you specify in docker-compose:
+
+<img width="250" height="40" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/Screen%20Shot%202019-04-11%20at%2018.25.20.png">
+
+If everything went well, you will see below page:
+
+<img width="1000" height="400" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/Screen%20Shot%202019-04-11%20at%2018.33.31.png">
 
 
+## INSTALL PMM-CLIENT 
+- firsly you need to fetch the repository package:
+```
+root@host:~# wget https://repo.percona.com/apt/percona-release_latest.generic_all.deb
+```
+- install the downloaded repository package with ```dpkg```:
+
+```
+root@host:~# dpkg -i percona-release_latest.generic_all.deb
+```
+- install the PMM Client package:
+```
+root@host:~# apt-get install pmm-client
+```
+This will install on your host latest version PMM Client.
+
+## CONNECTING PMM CLIENT TO PMM SERVER
+To connect your Pmm Client to Pmm Server you need to do next:
+```
+root@host:~# pmm-admin config --server 192.168.0.0:81 --server-password YoUr-PassWorD
+```
+>in docker-compose file you may specify -SERVER_PASSWORD for security your Pmm-Server, but in this case during registration yourr host you need specify your --SERVER-PASSWORD as in the example above.
+
+## ADDING MYSQL METRICS SERVICE
+To add your MySQL service to monitoring you may use next command:
+```
+root@host:~# pmm-admin add mysql
+```
+After some time can see 
 <p align="center">
 <img src="https://octodex.github.com/images/dojocat.jpg" width="200">
 </p>
