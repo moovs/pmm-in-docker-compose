@@ -40,11 +40,11 @@ docker run -d \
 
 - the next step you need stop and remove ```pmm-server container```:
 ```
-root@host:~# docker stop pmm-server container
+root@host:~# docker stop pmm-server_container
 ```
 
 ```
-root@host:~# docker rm pmm-server container
+root@host:~# docker rm pmm-server_container
 ```
 - after that you should сopy volumes files from ```pmm-data container``` to your host:
 <br>
@@ -69,6 +69,12 @@ root@host:~# docker cp id_pmm-data_container:/var/lib/mysql /your/mysql/data/on/
 ```
 root@host:~# docker cp id_pmm-data_container:/var/lib/grafana /your/grafana/data/on/host
 ```
+- after that you need delete ```pmm-data container```:
+
+```
+root@host:~# docker rm pmm-data_container
+```
+
 - the last step is just to run:
 ```
 docker-compose up -d
