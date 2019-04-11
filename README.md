@@ -149,7 +149,7 @@ mysql> INSTALL PLUGIN QUERY_RESPONSE_TIME_WRITE SONAME 'query_response_time.so';
 ```
 mysql> SET GLOBAL query_response_time_stats=ON;
 ```
-After that you will see information like this:
+- after that you will see information like this:
 <img width="1000" height="500" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/query.png">
 ##
 ## LINKS TO MORE INFORMATION
