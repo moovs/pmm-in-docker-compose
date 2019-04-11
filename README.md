@@ -14,5 +14,5 @@ It is developed by Percona in collaboration with experts in the field of managed
 <br>
 PMM is a free and open-source solution that you can run in your own environment for maximum security and reliability. It provides thorough time-based analysis for MySQL and MongoDB servers to ensure that your data works as efficiently as possible.
 
-~ ~ 
-<br/>
+# Getting a PMM server running on docker is just matter of following a few simple steps.
+## Section 1
