@@ -15,8 +15,8 @@ It is developed by Percona in collaboration with experts in the field of managed
 PMM is a free and open-source solution that you can run in your own environment for maximum security and reliability. It provides thorough time-based analysis for MySQL and MongoDB servers to ensure that your data works as efficiently as possible.
 ***
 
-# Getting a PMM server running on docker is just matter of following a few simple steps.
-## Step 1
+## Getting a PMM server running on docker is just matter of following a few simple steps.
+# Step 1
 If you just run the docker-compose file it will not work correctly due to incorrect container initialization.
 <br>
 Therefore, the first step that you will need to do create the pmm-data container with default values: 
