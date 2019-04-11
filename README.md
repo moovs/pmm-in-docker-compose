@@ -108,18 +108,54 @@ root@host:~# apt-get install pmm-client
 This will install on your host latest version PMM Client.
 
 ## CONNECTING PMM CLIENT TO PMM SERVER
-To connect your Pmm Client to Pmm Server you need to do next:
+- to connect your Pmm Client to Pmm Server you need to do next:
 ```
 root@host:~# pmm-admin config --server 192.168.0.0:81 --server-password YoUr-PassWorD
 ```
 >in docker-compose file you may specify -SERVER_PASSWORD for security your Pmm-Server, but in this case during registration yourr host you need specify your --SERVER-PASSWORD as in the example above.
+- you 
 
 ## ADDING MYSQL METRICS SERVICE
-To add your MySQL service to monitoring you may use next command:
+- to add your MySQL service to monitoring you may use next command:
 ```
 root@host:~# pmm-admin add mysql
 ```
-After some time can see 
+- after some time in section ```Mysql > Overview``` you can see information like this:
+<img width="1000" height="500" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/Screen%20Shot%202019-04-11%20at%2018.11.40.png">
+
+- finally, check the all services are up and running using below command:
+```
+root@host:~# pmm-admin list
+```
+
+## CONFIGURING MYSQL FOR BEST RESULTS
+PMM can collect query data either from the slow query log or from Performance Schema. The slow query log provides maximum details, but can impact performance on heavily loaded systems. On Percona Server the query sampling feature may reduce the performance impact.
+## 
+- to enable user statistics, set the ```userstat``` variable to ```1``` in your ```my.cnf``` config file. But after that you need to restart you MySQL instance. If you don't have this opportunity you may set this in mysql directly:
+```
+> mysql: SET GLOBAL userstat=ON;
+```
+##
+Query response time distribution is a feature available in Percona Server. It provides information about changes in query response time for different groups of queries, often allowing to spot performance problems before they lead to serious issues.
+To enable collection of query response time:
+1. Install the QUERY_RESPONSE_TIME plugins:
+```
+mysql> INSTALL PLUGIN QUERY_RESPONSE_TIME_AUDIT SONAME 'query_response_time.so';
+mysql> INSTALL PLUGIN QUERY_RESPONSE_TIME SONAME 'query_response_time.so';
+mysql> INSTALL PLUGIN QUERY_RESPONSE_TIME_READ SONAME 'query_response_time.so';
+mysql> INSTALL PLUGIN QUERY_RESPONSE_TIME_WRITE SONAME 'query_response_time.so';
+```
+2. Set the global varible query_response_time_stats to ON:
+```
+mysql> SET GLOBAL query_response_time_stats=ON;
+```
+After that you will see information like this:
+<img width="1000" height="500" src="https://github.com/moovs/pmm-in-docker-compose/blob/master/src/Screen%20Shot%202019-04-11%20at%2019.58.48.png">
+
+
+
+
+
 <p align="center">
 <img src="https://octodex.github.com/images/dojocat.jpg" width="200">
 </p>
