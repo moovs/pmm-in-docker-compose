@@ -77,7 +77,23 @@ root@host:~# docker cp id_pmm-data_container:/var/lib/grafana /your/grafana/data
 root@host:~# docker rm pmm-data_container
 ```
 ##
-- the last step is just to run next command for launch new correct initialized ```pmm-server & pmm-data containers``` in docker-compose:
+- the last step you need to specify you hosts volumes for pmm-data in docker-compose file as show below: 
+```yml
+version: '2'
+
+services:
+  pmm-data:
+    image: percona/pmm-server:latest
+    container_name: pmm-data
+    volumes:
+      - /your/host/prometheus/data:/opt/prometheus/data
+      - /your/host/consul-data:/opt/consul-data
+      - /your/host/mysql:/var/lib/mysql
+      - /your/host/grafana:/var/lib/grafana
+    entrypoint: /bin/true
+```
+
+-  after that just to run next command for launch new correct initialized ```pmm-server & pmm-data containers``` in docker-compose:
 ```
 root@host:~# docker-compose up -d
 ```
