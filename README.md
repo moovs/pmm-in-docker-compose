@@ -19,7 +19,7 @@ PMM is a free and open-source solution that you can run in your own environment 
 If you just run the docker-compose file it will not work correctly due to incorrect container initialization, therefore:
 <br>
 - the first step that you will need to do create the ```pmm-data container``` with default values: 
-```js
+```c
 docker create \
    -v /opt/prometheus/data \
    -v /opt/consul-data \
@@ -29,7 +29,7 @@ docker create \
    percona/pmm-server:latest /bin/true
 ```
 - the second step is create and start ```pmm-server container``` to initialize the data directory correctly:
-```js
+```c
 docker run -d \
   -p 81:80 \
   --volumes-from pmm-data \
