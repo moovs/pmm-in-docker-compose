@@ -117,6 +117,10 @@ root@host:~# wget https://repo.percona.com/apt/percona-release_latest.generic_al
 ```
 root@host:~# dpkg -i percona-release_latest.generic_all.deb
 ```
+- apt-get update
+```
+root@host:~# apt-get update
+```
 - install the PMM Client package:
 ```
 root@host:~# apt-get install pmm-client
