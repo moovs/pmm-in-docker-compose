@@ -108,6 +108,7 @@ If everything went well, you will see below page:
 
 
 ## INSTALL PMM-CLIENT 
+You need to install PMM-CLIENT on host with your Database that you want to monitor:
 - firstly you need to fetch the repository package:
 ```
 root@host:~# wget https://repo.percona.com/apt/percona-release_latest.generic_all.deb
