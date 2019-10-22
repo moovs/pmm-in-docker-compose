@@ -108,7 +108,7 @@ If everything went well, you will see below page:
 
 
 ## INSTALL PMM-CLIENT 
-- firsly you need to fetch the repository package:
+- firstly you need to fetch the repository package:
 ```
 root@host:~# wget https://repo.percona.com/apt/percona-release_latest.generic_all.deb
 ```
