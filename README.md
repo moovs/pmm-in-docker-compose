@@ -182,10 +182,3 @@ mysql> SET GLOBAL query_response_time_stats=ON;
 > https://www.percona.com/doc/percona-monitoring-and-management/index.metrics-monitor.dashboard.html | Metrics Monitor Dashboards <br>
 > https://www.percona.com/doc/percona-monitoring-and-management/glossary.option.html | PMM Server Additional Options <br>
 > https://www.percona.com/doc/percona-monitoring-and-management/deploy/client/apt.html | Installing PMM Client on Debian or Ubuntu<br>
-
-<p align="center">
-<img src="https://octodex.github.com/images/dojocat.jpg" width="200">
-</p>
-<p align="center">
-<b>sayonara</b>
-</p>
