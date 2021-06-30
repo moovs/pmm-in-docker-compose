@@ -175,7 +175,7 @@ mysql> SET GLOBAL query_response_time_stats=ON;
 
 ##
 
-## LINKS TO MORE INFORMATION
+## LINKS FOR MORE INFORMATION
 > https://www.percona.com/doc/percona-monitoring-and-management/index.html | Percona Monitoring and Management Documentation <br>
 > https://www.percona.com/doc/percona-monitoring-and-management/pmm-admin.html#pmm-admin-add | Managing PMM Client <br>
 > https://www.percona.com/doc/percona-monitoring-and-management/conf-mysql.html#pmm-conf-mysql-slow-log-settings | Configuring MySQL for Best Results <br>
